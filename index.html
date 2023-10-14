@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data JSON dalam Tabel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.7.3/dist/full.css" rel="stylesheet" type="text/css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+  <style>
+    .btn-sort{
+      display: none;
+    }
+  </style>
+  <div class="w-full p-5 text-center text-2xl font-bold">
+    <h1>Data Panen</h1>
+  </div>
+
+  
+
+  <div class="overflow-x-auto w-full flex justify-center flex-col items-center">
+    <div class="flex w-full justify-center gap-3 my-4">
+      <button class="btn btn-sort" id="sort-tahun">Sort Tahun</button>
+      <button class="btn btn-sort" id="sort-jenis">Sort Jenis</button>
+      <button class="btn btn-sort" id="sort-hasil">Sort Hasil</button>
+    </div>
+
+    
+    <table id="data-table" class="table w-[50%]  border-2" cellspacing="2" cell>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Tahun</th>
+          <th>Jenis</th>
+          <th>Hasil</th>
+        </tr>
+      </thead>
+      <tbody id="table-body" class=" overflow-y-auto"></tbody>
+    </table>
+  </div>
+  <div class="flex w-full justify-center gap-3 my-4">
+    <button class="btn btn-warning" id="tampil_data_semua">Tampilkan Semua data</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
